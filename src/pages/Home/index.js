@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Container, Title, SubTitle, CardMovie } from "../../components";
 import * as CinemaService from "../../services/CinemaService";
 import * as S from "./styles";
+import { addMovie, removeMovie } from "../../redux/Movies";
 
 const HomePage = () => {
   const [movie, setMovie] = useState("");
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSearch = async () => {
     try {
@@ -32,6 +35,27 @@ const HomePage = () => {
     handleSearch();
   };
 
+  const handleFavoriteButton = (item) => {
+    const newListMovie = movies.map((movieItem) => {
+      if (movieItem.imdbID === item.imdbID) {
+        const newMovieInfo = {
+          ...movieItem,
+          Favorite: !movieItem.Favorite,
+        };
+        console.log("Aqui", newMovieInfo);
+
+        if (item.Favorite) {
+          dispatch(removeMovie(newMovieInfo.imdbID));
+        } else {
+          dispatch(addMovie(newMovieInfo));
+        }
+        return newMovieInfo;
+      }
+      return movieItem;
+    });
+    setMovies(newListMovie);
+  };
+
   return (
     <Container>
       <S.TitleWrapper>
@@ -52,7 +76,11 @@ const HomePage = () => {
       </S.InputWrapper>
       <S.ResultMoviesWrapper>
         {movies.map((movie) => (
-          <CardMovie key={movie.imdbID} movie={movie} />
+          <CardMovie
+            key={movie.imdbID}
+            movie={movie}
+            onPressFavorite={handleFavoriteButton}
+          />
         ))}
       </S.ResultMoviesWrapper>
     </Container>
