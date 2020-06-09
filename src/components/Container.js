@@ -6,4 +6,7 @@ export const Container = styled.main`
   height: 100vh;
   width: 100%;
   background-color: ${({ theme }) => theme.bgColor};
+  @media (min-width: 768px) {
+    padding-top: 3em;
+  }
 `;

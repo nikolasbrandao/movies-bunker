@@ -11,6 +11,10 @@ const NavWrapper = styled.nav`
   bottom: 0;
   width: 100%;
   background-color: ${({ theme }) => theme.primaryDark};
+  @media (min-width: 768px) {
+    top: 0;
+    bottom: auto;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
