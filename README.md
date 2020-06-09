@@ -14,9 +14,17 @@ Para o desafio optei por utilizar React e construir uma Single Page Application 
 
 ## Solução
 
-|      Tela principal      |    Tela de Favoritos     | Tela de favoritos (Vazia) |
-| :----------------------: | :----------------------: | :-----------------------: |
-| ![Screen](./Screen1.png) | ![Screen](./Screen2.png) | ![Screen](./Screen3.png)  |
+### Mobile
+
+|            Página principal             |                 Loader                  |           Página de favoritos           |       Página de favoritos (Vazia)       |
+| :-------------------------------------: | :-------------------------------------: | :-------------------------------------: | :-------------------------------------: |
+| ![Screen](./doc_assets/mb-mobile-1.png) | ![Screen](./doc_assets/mb-mobile-2.png) | ![Screen](./doc_assets/mb-mobile-3.png) | ![Screen](./doc_assets/mb-mobile-4.png) |
+
+### Desktop
+
+|           Página de principal            |           Página de favoritos            |
+| :--------------------------------------: | :--------------------------------------: |
+| ![Screen](./doc_assets/mb-desktop-1.png) | ![Screen](./doc_assets/mb-desktop-2.png) |
 
 A página busca na base da OMDb os filmes digitados pelo usário e entrega algumas informações básicas sobre o filme, como incremento o usuário pode clicar no icone de estrela e favoritar seus filmes preferidos, que podem ser consultados na aba lateral.
 
