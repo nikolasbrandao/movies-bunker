@@ -91,4 +91,5 @@ export const LoadingWrapper = styled.div`
 
 export const LoadingMessage = styled.span`
   text-align: center;
+  color: ${({ theme }) => theme.primaryYellow};
 `;

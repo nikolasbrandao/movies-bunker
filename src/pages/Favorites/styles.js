@@ -29,14 +29,14 @@ export const EmptyMoviesWrapper = styled.div`
 `;
 
 export const EmptyIcon = styled(ClipboardList)`
-  color: ${({ theme }) => theme.secondaryColor};
+  color: ${({ theme }) => theme.secondaryLight};
   width: 2em;
   margin: 1em 0;
 `;
 
 export const EmptyMessage = styled.p`
   text-align: center;
-  color: ${({ theme }) => theme.secondaryGray};
+  color: ${({ theme }) => theme.primaryYellow};
   font-size: 1.1em;
   margin-bottom: 0.3em;
 `;

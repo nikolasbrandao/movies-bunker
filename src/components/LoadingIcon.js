@@ -12,7 +12,7 @@ const rotate = keyframes`
 `;
 
 export const LoadingIcon = styled(Loader)`
-  color: ${({ theme }) => theme.secondaryColor};
+  color: ${({ theme }) => theme.secondaryLight};
   width: 2em;
   margin: 1em 0;
   animation: ${rotate} 2s linear infinite;
