@@ -4,6 +4,9 @@ export const TitleWrapper = styled.header`
   display: flex;
   flex-direction: column;
   margin: 2em 1em 1em 1em;
+  @media (min-width: 768px) {
+    align-items: center;
+  }
 `;
 
 export const InputWrapper = styled.section`
@@ -12,6 +15,11 @@ export const InputWrapper = styled.section`
   margin: 5%;
   flex-direction: column;
   justify-content: center;
+  @media (min-width: 768px) {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const InputLabel = styled.p`
@@ -79,6 +87,14 @@ export const ResultMoviesWrapper = styled.div`
     display: none;
   }
   -ms-overflow-style: none;
+  @media (min-width: 768px) {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+  }
 `;
 
 export const LoadingWrapper = styled.div`
@@ -87,6 +103,10 @@ export const LoadingWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 1em 0;
+  @media (min-width: 768px) {
+    width: 60vw;
+    justify-content: flex-start;
+  }
 `;
 
 export const LoadingMessage = styled.span`

@@ -21,6 +21,7 @@ const CardImage = styled.img`
 
 const CardInfosWrapper = styled.div`
   width: 60%;
+  padding-left: 0.5em;
 `;
 
 const CardTitle = styled.p`

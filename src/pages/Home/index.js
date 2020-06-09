@@ -24,7 +24,6 @@ const HomePage = () => {
       if (listMovies.Error) {
         throw new Error(listMovies.Error);
       }
-      console.log("listMovies", listMovies);
       setMovies([...movies, ...listMovies.Search]);
     } catch (error) {
       console.log("Error");
