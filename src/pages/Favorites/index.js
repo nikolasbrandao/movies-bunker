@@ -23,13 +23,22 @@ const FavoritesPage = () => {
         <SubTitle>Seus filmes prediletos.</SubTitle>
       </S.TitleWrapper>
       <S.ResultMoviesWrapper>
-        {movies.map((movie) => (
-          <CardMovie
-            key={movie.imdbID}
-            movie={movie}
-            onPressFavorite={handleFavoriteButton}
-          />
-        ))}
+        {movies.length ? (
+          movies.map((movie) => (
+            <CardMovie
+              key={movie.imdbID}
+              movie={movie}
+              onPressFavorite={handleFavoriteButton}
+            />
+          ))
+        ) : (
+          <S.EmptyMoviesWrapper>
+            <S.EmptyIcon />
+            <S.EmptyMessage>
+              Sua lista está vazia, registre seus filmes preferidos.
+            </S.EmptyMessage>
+          </S.EmptyMoviesWrapper>
+        )}
       </S.ResultMoviesWrapper>
     </Container>
   );

@@ -16,7 +16,7 @@ export const InputWrapper = styled.section`
 
 export const InputLabel = styled.p`
   text-align: left;
-  color: ${({ theme }) => theme.secondaryGray};
+  color: ${({ theme }) => theme.primaryYellow};
   font-size: 1.1em;
   margin-bottom: 0.3em;
 `;
@@ -31,8 +31,8 @@ export const Input = styled.input`
   width: 70%;
   padding: 0.4em;
   font-size: 1.1em;
-  background-color: ${({ theme }) => theme.primaryGray};
-  border: 1px solid ${({ theme }) => theme.primaryGray};
+  background-color: ${({ theme }) => theme.primaryYellow};
+  border: 1px solid ${({ theme }) => theme.primaryYellow};
   border-right: none;
   color: ${({ theme }) => theme.primaryDark};
   border-radius: 2px;
@@ -62,8 +62,8 @@ export const InputButton = styled.button`
     outline: none;
   }
   &:hover {
-    border-color: ${({ theme }) => theme.primaryOrange};
-    background-color: ${({ theme }) => theme.primaryOrange};
+    border-color: ${({ theme }) => theme.secondaryGreen};
+    background-color: ${({ theme }) => theme.secondaryGreen};
     color: ${({ theme }) => theme.primaryLight};
   }
 `;
@@ -79,4 +79,16 @@ export const ResultMoviesWrapper = styled.div`
     display: none;
   }
   -ms-overflow-style: none;
+`;
+
+export const LoadingWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+`;
+
+export const LoadingMessage = styled.span`
+  text-align: center;
 `;

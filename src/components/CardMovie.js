@@ -10,6 +10,8 @@ const CardMovieWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
 `;
 
 const CardImage = styled.img`
