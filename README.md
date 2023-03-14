@@ -56,7 +56,7 @@ $ yarn start
 
 O projeto utiliza além do react, as seguintes bibliotecas:
 
-- Axios (recuperar os dados da Api)
+- Axios (recuperar os dados da Api).
 - React Router Dom (gerenciar a navegação entre as páginas)
 - Redux & React Redux (estado global para a aplicação)
 - Redux Persist (persistir dados na página mesmo após fecharmos a página, persistindo os dados no navegador)
